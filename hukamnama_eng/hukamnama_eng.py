@@ -3,7 +3,7 @@ import urllib
 import csv, pdb
 r = urllib.urlopen('http://old.sgpc.net/hukumnama/sgpconlinehukamnama.asp').read()
 # To read HTML data from URL
-soup = BeautifulSoup(r)
+soup = BeautifulSoup(r, "lxml")
 # To fetch <table> tags
 tables = soup.find_all('table')
 # To store <table> tag individually in the list
